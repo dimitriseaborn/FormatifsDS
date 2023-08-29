@@ -57,15 +57,27 @@ public class Formatif01 {
     private void afficherConvertirKmVersMetre(int kilometre) {
         int metre;
 
-        metre = kilometre * 1000;
+        metre = calculerKmVersMetre(kilometre);
         System.out.println(kilometre + " kilomètres équivalent à " + metre + " mètres.");
+    }
+
+    private static int calculerKmVersMetre(int kilometre) {
+        int metre;
+        metre = kilometre * 1000;
+        return metre;
     }
 
     private void afficherMetreVersKm(double metre) {
         double kilometre;
 
-        kilometre = metre / 1000d;
+        kilometre = calculerMetreVersKm(metre);
         System.out.println(metre + " mètres équivalent à " + kilometre + " kilomètres.");
+    }
+
+    private static double calculerMetreVersKm(double metre) {
+        double kilometre;
+        kilometre = metre / 1000d;
+        return kilometre;
     }
 
     public void appelerTous() {
