@@ -26,22 +26,32 @@ public class Formatif01 {
         System.out.println("La somme des chiffres de 3 à 6 est : " + resultat);
     }
 
-    private void calculerEtAfficher0CelsiusEnFarenheit() {
+    private void afficher0CelsiusEnFahrenheit() {
+        double fahrenheit = calculer0CelsiusEnFahrenheit();
+        System.out.println("0 Celsius en Farenheit est : " + fahrenheit);
+    }
+
+    private static double calculer0CelsiusEnFahrenheit() {
         double celsius;
         double fahrenheit;
 
         celsius = 0;
         fahrenheit = celsius * 9d / 5d + 32;
-        System.out.println("0 Celsius en Farenheit est : " + fahrenheit);
+        return fahrenheit;
     }
 
-    private void calculerEtAfficher0FarenheitEnCelsius() {
+    private void afficher0FahrenheitEnCelsius() {
+        double celsius = calculer0FahrenheitEnCelsius();
+        System.out.println("0 Fahrenheit En Celsius est : " + celsius);
+    }
+
+    private static double calculer0FahrenheitEnCelsius() {
         double celsius;
         double fahrenheit;
 
         fahrenheit = 0;
         celsius = (fahrenheit - 32) * 5d / 9d;
-        System.out.println("0 Farenheit En Celsius est : " + celsius);
+        return celsius;
     }
 
     private void afficherConvertirKmVersMetre(int kilometre) {
@@ -67,10 +77,10 @@ public class Formatif01 {
         afficherSomme3A6();
         afficherLigne();
         System.out.println("Question : 17");
-        calculerEtAfficher0CelsiusEnFarenheit();
+        afficher0CelsiusEnFahrenheit();
         afficherLigne();
         System.out.println("Question : 18");
-        calculerEtAfficher0FarenheitEnCelsius();
+        afficher0FahrenheitEnCelsius();
         afficherLigne();
         System.out.println("Question : 19");
         afficherConvertirKmVersMetre(2);
