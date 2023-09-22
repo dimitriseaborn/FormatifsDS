@@ -21,10 +21,10 @@ public class Formatif4G3DS2351867 {
         int note;
 
         note = lireEntier(question);
-        if (estEntreBornes(0, note, 0)) {
+        if (estEntreBornes(note, 0, 100)) {
             System.out.println("Vous avez entré la note: " + note + ", ce qui vous donne la cote suivante: " + convertirNoteACote(note) + ".");
         } else {
-            System.out.println("Désolé, la note " + note + "n'est pas valide. Veuillez entrer une valeur entre 0 et 100 inclusivement.");
+            System.out.println("Désolé, la note " + note + " n'est pas valide. Veuillez entrer une valeur entre 0 et 100 inclusivement.");
         }
     }
 
