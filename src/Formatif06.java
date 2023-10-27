@@ -31,7 +31,7 @@ public class Formatif06 {
             int[] tableau = tableaux[i];
             int largestNum = Integer.MIN_VALUE;
 
-            if(tableau.length == 0) {
+            if (tableau.length == 0) {
                 largestNum = 0;
             }
             for (int j = 0; j < tableau.length; j++) {
@@ -121,17 +121,12 @@ public class Formatif06 {
     }
 
     private boolean sontDesTableauxEgaux(int[] tab1, int[] tab2) {
-        boolean estEgal = true;
-        boolean estMemeLongueur = tab1.length == tab2.length;
+        boolean estEgal  = tab1.length == tab2.length;
 
-        if (estMemeLongueur) {
-            for (int i = 0; i < tab1.length; i++) {
-                if (tab1[i] != tab2[i]) {
-                    estEgal = false;
-                }
-            }
+        for (int i = 0; i < tab1.length && estEgal; i++) {
+            estEgal = tab1[i] == tab2[i];
         }
-        return estEgal && estMemeLongueur;
+        return estEgal;
     }
 
     private void testerTrouverIndice() {
@@ -147,13 +142,14 @@ public class Formatif06 {
     }
 
     private int trouverIndice(int[] tableau, int nb) {
+        int idxTrouve = -1;
         //return au milieu de la fonction: lisibilité à améliorer
-        for (int i = 0; i < tableau.length; i++) {
+        for (int i = 0; i < tableau.length && idxTrouve == -1; i++) {
             if (tableau[i] == nb) {
-                return i;
+                idxTrouve = i;
             }
         }
-        return -1;
+        return idxTrouve;
     }
 
     private void testerGetNbValeursPositives() {
