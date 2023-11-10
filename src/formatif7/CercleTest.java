@@ -1,3 +1,10 @@
+/*  420-201 – Formatif 7 - POO
+ *  Groupe : 3 – mardi & vendredi
+ *  Nom : Seaborn
+ *  Prénom : Dimitri
+ *  DA : 2351867
+ */
+
 package formatif7;
 
 public class CercleTest {
