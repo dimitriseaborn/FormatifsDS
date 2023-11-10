@@ -6,7 +6,7 @@ public class Cercle {
     public static final double DEFAULT_RAYON = 0;
 
     public Cercle() {
-        this(0);
+        this(DEFAULT_RAYON);
     }
 
     public Cercle(double rayon) {
@@ -14,7 +14,7 @@ public class Cercle {
     }
 
     public static boolean estRayonValide(double rayon) {
-        return rayon <= DEFAULT_RAYON;
+        return rayon >= 0;
     }
 
     public double getAire() {

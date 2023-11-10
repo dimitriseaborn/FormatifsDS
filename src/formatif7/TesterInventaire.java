@@ -21,6 +21,7 @@ public class TesterInventaire {
         Collections.shuffle(Arrays.asList(fruits));//mélange fruits pour le but des tests
         System.out.println(Arrays.toString(fruits));
         fruitsFaibles = Inventaire.getStockFruitFaible(fruits, 30);
+        System.out.println("Devrait afficher les fruits 0, 1 et 2");
         System.out.println(Arrays.toString(fruitsFaibles));
     }
 
